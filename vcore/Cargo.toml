@@ -4,7 +4,7 @@ version     = "0.1.0"
 edition     = "2021"
 authors     = ["d65v <https://github.com/d65v>"]
 description = "A minimal, fast & lightweight vector database written in Rust"
-license     = "MIT"
+license     = "apache2"
 readme      = "../README.md"
 
 [[bin]]
@@ -44,6 +44,7 @@ criterion = { version = "0.5", features = ["html_reports"] }
 
 [[bench]]
 name    = "search_bench"
+path    = "benches/search_bench.rs"
 harness = false
 
 [profile.release]

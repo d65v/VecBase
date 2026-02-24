@@ -85,9 +85,10 @@ docker-compose up --build
 - [vcore/doc-core.md](./vcore/doc-core.md) — Core internals
 - [vcore/src/algorithm/algorithm.md](./vcore/src/algorithm/algorithm.md) — ANN algorithm docs
 - [doc/](./doc/) — Full documentation
+- [license](LICENSE) - license
 
 ---
 
 ## License
 
-MIT © [d65v](https://github.com/d65v)
+apache2 © [d65v](https://github.com/d65v)
