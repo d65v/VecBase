@@ -90,4 +90,4 @@ docker-compose up --build
 
 ## License
 
-apache2 © [d65v](https://github.com/d65v)
+MIT © [d65v](https://github.com/d65v)
