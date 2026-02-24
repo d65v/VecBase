@@ -1,0 +1,53 @@
+[package]
+name        = "vecbase"
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["d65v <https://github.com/d65v>"]
+description = "A minimal, fast & lightweight vector database written in Rust"
+license     = "MIT"
+readme      = "../README.md"
+
+[[bin]]
+name = "vecbase"
+path = "src/main.rs"
+
+[lib]
+name  = "vcore"
+crate-type = ["cdylib", "rlib"]
+path  = "src/lib.rs"
+
+[dependencies]
+# Serialization
+serde       = { version = "1", features = ["derive"] }
+serde_json  = "1"
+
+# Error handling
+thiserror   = "1"
+anyhow      = "1"
+
+# Logging
+log         = "0.4"
+env_logger  = "0.11"
+
+# ANN / Math
+ordered-float = "4"
+rand          = "0.8"
+
+# Env config
+dotenv      = "0.15"
+
+# Storage (optional flat-file)
+bincode     = "1"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name    = "search_bench"
+harness = false
+
+[profile.release]
+opt-level     = 3
+lto           = true
+codegen-units = 1
+strip         = true

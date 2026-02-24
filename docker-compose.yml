@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  vecbase:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vecbase
+    restart: unless-stopped
+    ports:
+      - "7777:7777"
+    volumes:
+      - vecbase_data:/app/data
+    environment:
+      - RUST_LOG=info
+      - VECBASE_DIM=128
+      - VECBASE_METRIC=cosine
+      - VECBASE_MAX_ELEMENTS=1000000
+      - VECBASE_STORAGE_PATH=/app/data
+    # Override with your own .env:
+    # env_file:
+    #   - .env
+
+volumes:
+  vecbase_data:
+    driver: local
