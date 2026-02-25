@@ -18,7 +18,7 @@
 
 VecBase is a minimal vector database built for AI embedding storage, similarity search, and lightweight deployments. It is designed to be fast, with zero unnecessary bloat.
 
-**Made by**: [d65v](https://github.com/d65v) — *A Normal Rust Developer. Experience: 6 months in Rust, 1 day in C. Worked on: VecBase.*
+**Made by**: [d65v](https://github.com/d65v) — *A Normal Rust Developer. Experience: 6 months in Rust, 1 years in C. Worked on: VecBase.*
 
 ---
 
